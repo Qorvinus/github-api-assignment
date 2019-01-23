@@ -12,13 +12,13 @@ function getHandle(userHandle) {
   const searchUrl = 'https://api.github.com/users/' + userHandle + '/repos'
   fetch(searchUrl)
     .then(response => {
-      if(reponse.ok) {
+      if(response.ok) {
         return response.json();
       }
       throw new Error(response.statusText);
     })
     .then(responseJson => generateRepos(responseJson))
-    .catch(error => {
+    .catch(err => {
       $('.js-error-message').text(`Something went wrong...${err.message}`);
     });
 }
