@@ -1,0 +1,12 @@
+label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.error-message {
+  color: red;
+}
