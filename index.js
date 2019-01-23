@@ -25,6 +25,7 @@ function getHandle(userHandle) {
 
 function generateRepos(responseJson) {
   console.log(responseJson);
+  $('.js-error-message').empty();
   $('.js-results-list').empty();
   for (let i = 0; i < responseJson.length; i++) {
   $('.js-results-list').append(
